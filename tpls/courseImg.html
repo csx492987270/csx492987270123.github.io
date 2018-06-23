@@ -1,0 +1,19 @@
+<ol class="breadcrumb">
+    <li><a href="#">课程管理</a></li>
+    <li><a href="#">课程图片</a></li>
+</ol>
+{{each data}}
+<div class="media addc">
+    <div class="media-left media-middle">
+        <a href="#">
+      <img class="media-object" width="250px" height="120px" src="{{$value.url}}" alt="...">
+    </a>
+    </div>
+    <div class="media-body">
+        <span class="media-heading">{{$value.createdAt}}</span>
+        <div>--讲师:{{$value.publishedAt}}</div>
+        <div>--分类:{{$value.type}}</div>
+        <input type="file" id={{$index}}dd>
+    </div>
+</div>
+{{/each}}

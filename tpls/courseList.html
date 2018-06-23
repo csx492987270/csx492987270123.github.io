@@ -1,0 +1,35 @@
+<ol class="breadcrumb">
+    <li><a href="#">分类管理</a></li>
+    <li><a href="#">分类列表</a></li>
+</ol>
+<div class="row">
+    <div class="col-md-1 col-md-offset-10">
+        <button class="btn btn-success">添加分类</button>
+    </div>
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>分类名称</th>
+            <th>课程数量</th>
+            <th>是否显示</th>
+            <th>排序</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{each list}}
+        <tr {{$index%2==1? "class=info": ""}}>
+            <td>{{$value.content}}</td>
+            <td>{{$value.data_id}}</td>
+            <td>{{$value.status}}</td>
+            <td>
+                <img width="30px" height="30px" src="{{$value.user.profile_image}}" alt="">
+            </td>
+            <td dataId={ {$index}}>
+                <button type="button" class="btn btn-primary">编辑</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

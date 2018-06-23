@@ -1,0 +1,41 @@
+<ol class="breadcrumb">
+  <li><a href="#">讲师管理</a></li>
+  <li><a href="#">讲师列表</a></li>
+</ol>
+<div class="row">
+  <div class="col-md-1 col-md-offset-10">
+    <button class="btn btn-success">添加讲师</button>
+  </div>
+</div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>用户名</th>
+      <th>花名</th>
+      <th>性别</th>
+      <th>邮箱</th>
+      <th>账户状态</th>
+      <th>出生日期</th>
+      <th>入职日期</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{each forecast}}
+    <tr {{$index%2==1? "class=info": ""}}>
+      <td>{{$value.date}}</td>
+      <td>{{$value.fengli}}</td>
+      <td>{{$value.fengxiang}}</td>
+      <td>{{$value.high}}</td>
+      <td>{{$value.low}}</td>
+      <td>{{$value.type}}</td>
+      <td>{{$value.high}}</td>
+      <td dataId={{$index}}>
+        <button type="button" class="btn btn-success">查看</button>
+        <button type="button" idataId={ {$value}} class="btn btn-primary">编辑</button>
+        <button type="button" class="btn btn-info">启用</button>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

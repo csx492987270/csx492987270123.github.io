@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+a {
+  text-decoration: none;
+}
+.left {
+  width: 150px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #2aadb2;
+}
+.left .profile .pos {
+  width: 80px;
+  height: 80px;
+  margin: 30px auto 10px;
+}
+.left .profile .pos img {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+}
+.right {
+  position: absolute;
+  left: 150px;
+  right: 0;
+  background: pink;
+  min-height: 650px;
+}
+.right .panel-body .logo {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  background: #5ab359;
+}

@@ -1,0 +1,20 @@
+<ol class="breadcrumb">
+    <li><a href="#">课程管理</a></li>
+    <li><a href="#">课程列表</a></li>
+</ol>
+{{each data}}
+<div class="media addc">
+    <div class="media-left media-middle">
+        <a href="#">
+      <img class="media-object" width="250px" height="120px" src="{{$value.profile_image}}" alt="...">
+    </a>
+    </div>
+    <div class="media-body">
+        <span class="media-heading">{{$value.name}}</span>
+        <button type="button" class="btn btn-success">课程信息</button>
+        <button type="button" class="btn btn-primary">基本信息</button>\
+        <div>--讲师:{{$value.text}}</div>
+        <div>--分类:{{$value.theme_name}}</div>
+    </div>
+</div>
+{{/each}}
